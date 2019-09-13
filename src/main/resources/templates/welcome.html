@@ -15,23 +15,26 @@
 
 <main role="main" class="container">
 
+<span th:if="${messaggio !=null}" th:text="${messaggio}"></span>
+
 	<div class="starter-template">
         <h1>Ciao, benvenuto in City Builder!</h1><br>
         <h2>La migliore app di sempre dove puoi inserire la tua città!</h2>
         <h2>
         	<span>In che continente vuoi aggiungerla?</span>
-        </h2>
-    </div>
+		</h2>
+	</div>
     
 	<form th:action="@{/stati}" method="get">
-    <div>
-    <ul>
-    <span th:each="i : ${listaCont}">
-    <input type="radio" name="cont" th:value="${i}" th:text="${i}"><br>
-    </span>
-    </ul>  
-    <input type="submit" value="vai">
-    </div>
+    
+	<ul>
+	    <div class="centerPage-template">
+		    <span th:each="i : ${listaCont}">
+		    	<input type="radio" name="cont" th:value="${i}" th:text="${i}"><br>
+		    </span><br>
+	    <input type="submit" value="vai">
+	    </div>
+	</ul>
 
 </main>
 		
