@@ -16,17 +16,16 @@ public class WelcomeController {
 	@GetMapping("/")
 	public String main(@RequestParam(name = "name", required = false, defaultValue = "") String nome
 			, @RequestParam(name = "district", required = false, defaultValue = "") String distretto,
-			@RequestParam(name = "states", required = false, defaultValue = "") String stato, Model model) throws ClassNotFoundException, SQLException {
-        if(stato != null)
-        {
+			@RequestParam(name = "states", required = false) String stato, Model model) throws ClassNotFoundException, SQLException {
+     if (stato != null)
+     {
 		String code = ConnessioneDb.getCode(stato);
 		int pop = ConnessioneDb.getPopolazione(stato);
 		Citta nuovaCitta = new Citta(nome, code, distretto, pop);
 		ConnessioneDb.insertCity(nuovaCitta);
 		String messaggio = "Città inserita correttamente!";
 		model.addAttribute("messaggio", messaggio);
-		}
-		
+     }
 		List<String> listaCont = ConnessioneDb.getContinenti();
 		model.addAttribute("listaCont", listaCont);
 		

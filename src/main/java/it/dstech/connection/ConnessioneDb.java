@@ -83,11 +83,14 @@ public class ConnessioneDb {
 		PreparedStatement ps = getConnessione().prepareStatement(query);
 		ps.setString(1, code);
 		ResultSet result = ps.executeQuery();
-		int max = 0, min = 0;
+		int max = 0;
+	    int min = 0;
 		while (result.next()) {
 			max = result.getInt(1);
 			min = result.getInt(2);
 		}
+		System.out.println(min);
+		System.out.println(max);
 		Random random = new Random();
 		int pop = random.nextInt(max - min) + min;
 		return pop;
