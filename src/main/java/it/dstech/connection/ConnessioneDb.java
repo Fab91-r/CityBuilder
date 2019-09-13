@@ -98,7 +98,7 @@ public class ConnessioneDb {
 	
 	public static void insertCity(Citta citta) throws ClassNotFoundException, SQLException {
 		
-		String query = "insert into city (Name, CountryCode, District, Population) values(?,?,?,?);";
+		String query = "insert into world.city (Name, CountryCode, District, Population) values(?,?,?,?);";
 		PreparedStatement ps = getConnessione().prepareStatement(query);
 		ps.setString(1, citta.getName());
 		ps.setString(2, citta.getCode());
