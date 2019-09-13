@@ -1,6 +1,11 @@
 body {
-  background-color: beige;
+	background-image: url("https://desktopwalls.net/wp-content/uploads/2015/09/Mountain%20Lake%20Rocks%20Sunset%204K%20Ultra%20HD%20Desktop%20Wallpaper.jpg");
+	background-repeat: no-repeat;
+	background-color: #cccccc;
+	background-position: center center;
+	background-size: cover;
   padding-top: 3rem;
+  color:#ffffff;
 }
 
 .starter-template {
@@ -26,9 +31,9 @@ body {
   }
 
 h1{
-	color:#8b0000;
+	color:#ffffff;
 }
 
 h2{
-	color:#daa520;
+	color:#ffffff;
 }

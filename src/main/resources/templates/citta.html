@@ -11,13 +11,13 @@
     
 </head>
    
-<input type="hidden" name="states">
- 
+<input type="hidden" th:field="*{states}">
+  
     <ul>
 	    <div class="starter-template">
-	   		<h2>Ecco le citt<font>&#225</font> presenti:</h2>
+	    <h2>Ecco le citt<font>&#225</font> presenti:</h2>	   		
 	    	<p class="tre-colonne">
-			    <span th:each="i : ${listaCitta}" name="cities" th:value="${i}" th:text="${i}"><br>
+			    <span th:each="i : ${listaCitta}"><br> <name="cities" th:value="${i}" th:text="${i}"><br>
 			    </span>
 		    </p>
 	    </div>  
@@ -25,10 +25,10 @@
     
     <form action="/">
 	    <div class="centerPage-template">
-	    	<input type="text" name="name" placeholder="Inserisci il nome qui" required><br>
+	    	<input type="text" name="name" placeholder="Inserisci il nome qui" required><br><br>
 	    	<input type="text" name="district" placeholder="Inserisci il nome del distretto qui" required><br><br>
+	    <input type="submit" value="vai"><br><br>
 	    </div>
-    <input type="submit" value="vai">
     </form>
 
 <script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>    
