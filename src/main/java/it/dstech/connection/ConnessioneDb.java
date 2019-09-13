@@ -32,7 +32,7 @@ public class ConnessioneDb {
 		}
 		return listaContinenti;
 	}
-	
+
 	public static List<String> getStati(String continente) throws ClassNotFoundException, SQLException {
 		String query = "SELECT Name from country where Continent = ?;";
 		PreparedStatement ps = getConnessione().prepareStatement(query);
