@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Benvenuto</title>
+
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+    
+</head>
+
+<body>
+
+<main role="main" class="container">
+
+	<div class="starter-template">
+        <h1>Ciao, benvenuto in City Builder!</h1><br>
+        <h2>La migliore app di sempre dove puoi inserire la tua città!</h2>
+        <h2>
+        	<span>In che continente vuoi aggiungerla?</span>
+        </h2>
+    </div>
+    
+<!--	<form th:action="@{/citta}" method="POST">	-->
+    <div>
+    <ul>
+    <span th:each="i : ${listaCont}">
+    <input type="radio" name="cont" th:value="${i}" th:text="${i}"><br>
+    </span>
+    </ul>  
+    <input type="submit" value="vai">
+    </div>
+
+</main>
+		
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

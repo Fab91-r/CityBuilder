@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CityBuilder</title>
+</head>
+<body>
+
+	<div class="starter-template">
+        <h2>In quale Stato del continente vuoi inserire la città?</h2>
+    </div>
+    
+    <div>
+	    <ul>
+	    <span th:each="i : ${listaCont}">
+	    <input type="radio" name="cont" th:value="${i}" th:text="${i}"><br>
+	    </span>
+	    </ul>  
+	    <input type="submit" value="vai">
+    </div>
+    
+</body>
+</html>
