@@ -17,8 +17,9 @@
 	    <div class="starter-template">
 	   		<h2>Ecco le citt<font>&#225</font> presenti:</h2>
 	    	<p class="tre-colonne">
-		    <span th:each="i : ${listaCitta}" name="cities" th:value="${i}" th:text="${i}">
-		    </span>
+			    <span th:each="i : ${listaCitta}" name="cities" th:value="${i}" th:text="${i}"><br>
+			    </span>
+		    </p>
 	    </div>  
     </ul>
     

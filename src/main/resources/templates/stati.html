@@ -14,7 +14,9 @@
         <h2>
         <span>In quale Stato del continente vuoi inserire la citt<font>&#225</font>?</span></h2>
     </div>
-    
+  
+<form th:action="@{/citta}" method="get">
+  
     	<ul>
 		    <div class="centerPage-template">
 			    <p class="tre-colonne">
@@ -24,7 +26,9 @@
 			    </p>
 		    <input type="submit" value="vai">
 		    </div>
-	    </ul>  
+	    </ul> 
+	    
+</form> 
 
 <script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script> 
 </html>
