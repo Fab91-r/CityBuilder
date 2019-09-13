@@ -13,9 +13,10 @@
 
 <body>
 
+<span th:if="${messaggio !=null}"> <span name ="messaggio" th:value="${messaggio}"></span></span>
 <main role="main" class="container">
 
-<span th:if="${messaggio !=null}"> <th:text="${messaggio}"></span>
+
 
 	<div class="starter-template">
         <h1>Ciao, benvenuto in City Builder!</h1><br>

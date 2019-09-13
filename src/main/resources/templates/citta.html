@@ -11,7 +11,7 @@
     
 </head>
    
-<input type="hidden" th:field="*{states}">
+
   
     <ul>
 	    <div class="starter-template">
@@ -23,8 +23,9 @@
 	    </div>  
     </ul>
     
-    <form action="/">
-	    <div class="centerPage-template">
+    <form th:action="@{/}">
+    <input name = "states" th:value="${states}" style="visibility: hidden">
+	    <div class="centerPage-template">	    
 	    	<input type="text" name="name" placeholder="Inserisci il nome qui" required><br><br>
 	    	<input type="text" name="district" placeholder="Inserisci il nome del distretto qui" required><br><br>
 	    <input type="submit" value="vai"><br><br>
